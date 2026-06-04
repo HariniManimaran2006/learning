@@ -6,7 +6,7 @@ function Register() {
   return (
     <div
       style={{
-        backgroundColor: "#2f7f74",
+        backgroundColor: " #2f7f74",
         minHeight: "100vh",
         padding: "30px",
       }}
