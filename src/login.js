@@ -1,13 +1,13 @@
 import { useState } from "react";
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
-
     if (!email || !password) {
       setError("Please fill all fields");
       return;
@@ -69,12 +69,15 @@ function Login() {
 
         <button
           type="submit"
+          onClick={() => navigate("/dashboard")}
           style={{
-            width: "100%",
+            width: "50%",
             padding: "10px",
             backgroundColor: "blue",
             color: "white",
             border: "none",
+            display: "block",        
+            margin: "20px auto",
             cursor: "pointer"
           }}
         >
